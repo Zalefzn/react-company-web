@@ -1,0 +1,148 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.home-container{
+    width: 100%;
+    height: auto;
+    background-color:white;
+}
+/*Background*/
+
+.image-content img{
+    width: 100%;
+    height: 1080px;
+    object-fit: cover;
+}
+
+/*Navbar*/
+.navbar{
+    position: absolute;
+   
+}
+
+.logo{
+    margin-top: -1000px;
+    margin-left: 50px;
+}
+
+ul {
+    position: relative;
+    display: flex;
+    margin-top: -35px;
+    margin-left: 1320px;
+}
+
+li{
+    font-weight: bold;
+    display: inline-block;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px 24px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size:25px;
+    transition: 0.2s ease;
+}
+
+.btn-vol1{
+    margin-top: -20px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    background:white;
+    border-radius: 30px;
+    color: black;
+    padding: 15px 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn-vol1:hover{
+    margin-top: -20px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    background:rgb(159, 159, 159);
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    padding: 15px 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.content-container{
+    margin-top: -700px;
+    margin-left: 50px;
+    color: white;
+}
+
+.text-vol1{
+    font-size: 30px;
+    font-weight: bold;
+    animation-name: animasi1;
+    animation-duration: 4s;
+}
+
+.text-vol2{
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    animation-name: animasi1;
+    animation-duration: 5s;
+}
+
+.button-vol1{
+    margin-top: 50px;
+}
+
+.btn-vol2{
+    animation-name: animasi1;
+    animation-duration: 6s;
+    margin-top: -20px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    background:white;
+    border-radius: 30px;
+    color: black;
+    padding: 10px 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn-vol2:hover{
+    animation-name: animasi1;
+    animation-duration: 6s;
+    margin-top: -20px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    background:rgb(159, 159, 159);
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    padding: 10px 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container-image{
+    margin-top: -400px;
+    margin-left: 1200px;
+}
+
+.img-vol1{
+    height: 600px;
+    width: auto;
+    animation-name: animasi1;
+    animation-duration: 7s;
+}
+
+
+@keyframes animasi1 {
+    0%{
+        transform: scale(1.5);
+        opacity: 0;
+    }
+    
+    25%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
