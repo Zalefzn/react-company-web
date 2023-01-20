@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.login-items{
+    position: absolute;
+    left: 76%;
+    margin-top: -20%;
+}
+
+label{
+    text-align: left;
+    color: white;
+    margin-top: 15px;
+}

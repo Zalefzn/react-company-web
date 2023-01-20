@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+.content-image .bg-vol1{
+    margin-left: 50px;
+    margin-top: 50px;
+    display: absolute;
+}
+
+.display-bg .bg{
+    float: right;
+    margin-top: -80px;
+}
+
+.image-vol2{
+    margin-left: 20%;
+    margin-top: 10%;
+}
+
+.text-content{
+    margin: auto;
+    margin-top: 20px;
+    
+}
+
+.text-vol1-content1{
+    font-size: 25px;
+    font-weight:bold;
+    text-align: center;
+}

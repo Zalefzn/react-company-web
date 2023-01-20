@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./HomePage.css";
 import swal from "sweetalert";
+import {Link} from'react-router-dom';
 
 class HomePage extends Component {
   constructor(props) {
@@ -22,6 +23,8 @@ class HomePage extends Component {
     });
   }
 
+
+
   render() {
     const { home, button1, image, button2 } = this.props;
     const { p2 } = this.state;
@@ -36,19 +39,12 @@ class HomePage extends Component {
           <div className="logo">
             <img src="logo.png" alt=""></img>
           </div>
-          <ul>
-            <li className="li-vol1">{home}</li>
-            <li className="li-vol2">
-              <button
-                className="btn-vol1"
-                type="button"
-                name="button"
-                onClick={this.handleAlert}
-              >
-                {button1}
-              </button>
-            </li>
-          </ul>
+          <div className="text-home">
+              <p className="p-vol3">{home}</p>
+            </div>
+            <div className="button-vol2">
+              <button  className="btn-vol3"type="button" name="button" onClick={this.handleAlert}>{button1}</button>
+            </div>
         </div>
 
         {/*Content*/}
@@ -64,7 +60,7 @@ class HomePage extends Component {
           </div>
           <div className="button-vol1">
             <button className="btn-vol2" type="button" name="button">
-              {button2}
+              <Link className="link-vol1"to ="/LoginPage">{button2}</Link>
             </button>
           </div>
           <div className="container-image">
