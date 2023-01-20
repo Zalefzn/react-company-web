@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import "./HomePage.css";
 import swal from "sweetalert";
+import axios from 'axios';
 import {Link} from'react-router-dom';
+import { urlApi } from "../Lib/api/Api";
 
 class HomePage extends Component {
   constructor(props) {
@@ -10,8 +12,10 @@ class HomePage extends Component {
       status: true,
       bg: "bg_Vol1.png",
       p2: "Techkuy is Your Best Solution in doing Business",
+      take:[],
     };
     this.handleAlert = this.handleAlert.bind(this);
+    this.getDataLogin = this.getDataLogin.bind(this);
   }
 
   handleAlert(e) {
@@ -21,6 +25,15 @@ class HomePage extends Component {
       text: "Please Sign in First!",
       icon: "warning",
     });
+  }
+
+  getDataLogin(){
+    axios.get(urlApi+"api/users/").then((res) => {
+      this.setState({
+        take: res.data,
+      });
+      console.info(res.data);
+    })
   }
 
 
@@ -59,7 +72,12 @@ class HomePage extends Component {
             <p className="p-vol2">{p2}</p>
           </div>
           <div className="button-vol1">
-            <button className="btn-vol2" type="button" name="button">
+            <button 
+            className="btn-vol2" 
+            type="button" 
+            name="button"
+            onClick={this.getDataLogin}
+            >
               <Link className="link-vol1"to ="/LoginPage">{button2}</Link>
             </button>
           </div>

@@ -5,14 +5,40 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+.login-content{
+    position: relative;
+}
+
+.text-welcome{
+    margin-top: -700px;
+    margin-left: 77%;
+    position: absolute;
+    color: white;
+    text-align: center;
+}
+
+.p-vol1-form{
+    font-size: 20px;
+}
+
 .login-items{
     position: absolute;
-    left: 76%;
-    margin-top: -20%;
+    left: 71%;
+    margin-top: -23%;
 }
+
 
 label{
     text-align: left;
     color: white;
-    margin-top: 15px;
+    font-size: 20px;
+}
+
+input{
+    padding: 15px 120px;
+    border-radius: 30px;
+    background: none;
+    border-width: 2;
+    border-color: white;
+    color: grey;
 }
