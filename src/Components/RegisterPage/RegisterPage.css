@@ -4,14 +4,14 @@
     position: relative;
 }
 
-.content-image .bg-vol1{
+.content-image-regis .bg-vol1-regis{
     margin-left: 50px;
     margin-top: 50px;
     display: absolute;
     
 }
 
-.display-bg .bg{
+.display-bg-regis .bg-regis{
     float: right;
     height: 1085px;
     object-fit: cover;
@@ -19,14 +19,14 @@
     
 }
 
-.image-vol2{
+.image-vol2-regis{
     margin-left: 18%;
     margin-top: 10%;
     animation-name: animasi1;
     animation-duration: 4s;
 }
 
-.text-content{
+.text-content-regis{
     margin: auto;
     margin-top: 20px;
     animation-name: animasi1;
@@ -34,7 +34,7 @@
     
 }
 
-.text-vol1-content1{
+.text-vol1-content1-regis{
     font-size: 25px;
     font-weight:bold;
     text-align: center;

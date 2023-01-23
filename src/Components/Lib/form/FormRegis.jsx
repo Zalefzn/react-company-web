@@ -1,28 +1,41 @@
 import React, { Component } from "react";
-import "./Form.css";
+import "./FormRegis.css";
 import swal from "sweetalert";
 import {Link} from "react-router-dom";
 
-class FormLogin extends Component {
+class FormRegis extends Component {
   constructor(props) {
     super(props);
     this.state = {
       cek: true,
       judul: "Welcome Back",
-      sub: "Sign in your account",
-      value: ""
+      sub: "Sign Up your account",
+      value: "",
+      date: Date.now(),
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleSubmit = (e) => {
+  handleSubmit(e) {
     e.preventDefault();
+    if(this.state.date === null){
       swal({
-        title: "Success!",
-        text: "Login Success!",
-        icon: "success",
+        title: "Warning!",
+        text: "Register failed!",
+        icon: "warning",
       });
+      
+    } else {
+      if(this.state.date !== null){
+        swal({
+          title: "Success!",
+          text: "Register Success!",
+          icon: "success",
+        });
+      }
+    }
+    
   }
 
   handleChange(event){
@@ -33,15 +46,21 @@ class FormLogin extends Component {
   }
 
   render() {
-    const { password, username, buttonName, forgetPass, haveAccount } = this.props;
+    const { password, username, buttonName, haveAccount, email } = this.props;
     return (
       <div className="login-content">
         <div className="text-welcome">
           <h2>{this.state.judul}</h2>
           <p className="p-vol1-form">{this.state.sub}</p>
         </div>
-        <div className="login-items">
+        <div className="login-items-regis">
           <form>
+            <label>{email}</label>
+            <br></br>
+            <br></br>
+            <input placeholder="your email..."type="text" onChange={this.handleChange}></input>
+            <br></br>
+            <br></br>
             <label>{username}</label>
             <br></br>
             <br></br>
@@ -59,14 +78,9 @@ class FormLogin extends Component {
             </button>
           </form>
         </div>
-        <div className="forget-pass">
-          <p className="p-vol2-form">
-            <Link className="link-forget"to="/ForgetPass">{forgetPass}</Link>
-            </p>
-        </div>
         <div className="have-account">
-          <p className="p-vol3-form">
-            {haveAccount} <Link className="link-regis" to="/RegisterPage">Register</Link>
+          <p className="p-vol3-form-regis">
+            {haveAccount} <Link className="link-regis" to="/LoginPage">Login</Link>
           </p>
         </div>
       </div>
@@ -74,4 +88,4 @@ class FormLogin extends Component {
   }
 }
 
-export default FormLogin;
+export default FormRegis;

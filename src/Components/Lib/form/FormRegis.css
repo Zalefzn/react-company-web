@@ -21,10 +21,10 @@
     font-size: 20px;
 }
 
-.login-items{
+.login-items-regis{
     position: absolute;
     left: 69%;
-    margin-top: -23%;
+    margin-top: -30%;
 }
 
 .p-vol2-form{
@@ -65,7 +65,7 @@ input{
     animation-duration: 4s;
 }
 
-.p-vol3-form{
+.p-vol3-form-regis{
     position: absolute;
     color: white;
     font-size: 16px;
@@ -82,11 +82,6 @@ input{
 .link-home{
     text-decoration: none;
     color: rgb(0, 0, 0)
-}
-
-.link-forget{
-    text-decoration: none;
-    color: white;
 }
 
 @keyframes animasi1 {
