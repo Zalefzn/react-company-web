@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.email-content{
+    position: relative;
+}
+
+.email-items{
+    position: absolute;
+    left: 55%;
+    margin-top: 30%;
+}
+
+.input-email{
+    padding: 15px 180px;
+    border-radius: 30px;
+    background: none;
+    border-width: 2;
+    border-color: rgb(247, 93, 255);
+    color: grey;
+}
+
+
+

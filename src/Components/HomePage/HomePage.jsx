@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import "./HomePage.css";
 import swal from "sweetalert";
-import axios from 'axios';
 import {Link} from'react-router-dom';
-import { urlApi } from "../Lib/api/Api";
+import ApiDataGet from "../Lib/api/Api";
 
 class HomePage extends Component {
   constructor(props) {
@@ -28,12 +27,11 @@ class HomePage extends Component {
   }
 
   getDataLogin(){
-    axios.get(urlApi+"api/users/").then((res) => {
-      this.setState({
-        take: res.data,
+    ApiDataGet.getDataUser().then(result => {
+      this.setState = ({
+       tampungData: result,
       });
-      console.info(res.data);
-    })
+     })
   }
 
 

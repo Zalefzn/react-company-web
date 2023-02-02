@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Form.css";
 import swal from "sweetalert";
 import {Link} from "react-router-dom";
+import ApiDataGet from "../api/Api";
 
 class FormLogin extends Component {
   constructor(props) {
@@ -10,27 +11,36 @@ class FormLogin extends Component {
       cek: true,
       judul: "Welcome Back",
       sub: "Sign in your account",
-      value: ""
+      value: "",
+      tampungData: [],
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = (e, event = this.state.value) => {
     e.preventDefault();
+    if(event !== null){
+      ApiDataGet.getDataUser().then(result => {
+       this.setState = ({
+        tampungData: result,
+       });
+      })
       swal({
-        title: "Success!",
-        text: "Login Success!",
+        title: "Success",
+        text: "Data Success",
         icon: "success",
-      });
+      })
+    }      
   }
-
+  
   handleChange(event){
       this.setState({
         value: event.target.value,
       });
       console.info(event.target.value);
   }
+
 
   render() {
     const { password, username, buttonName, forgetPass, haveAccount } = this.props;

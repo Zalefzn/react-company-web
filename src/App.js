@@ -5,6 +5,7 @@ import LoginPage from "./Components/LoginPage/LoginPage";
 import RegisterPage from "./Components/RegisterPage/RegisterPage";
 import HomeScreens from "./Components/Lib/screen/ScreenHome/ScreenHome";
 import ForgetPass from "./Components/ForgetPass/ForgetPass";
+import VerificationPage from "./Components/Verification/Verification";
 
 class App extends Component {
   render() {
@@ -33,7 +34,10 @@ class App extends Component {
             logo="logo.png" bg="bg_vol2.png" pict="pict.png"
             />}></Route>
             <Route path="/HomeScreen" element={<HomeScreens />}></Route>
-            <Route path="/ForgetPass" element={<ForgetPass />}></Route>
+            <Route path="/ForgetPass" element={
+            <ForgetPass
+            />}></Route>
+            <Route path="/Verification" element={<VerificationPage />}></Route>
           </Routes>
         </Fragment>
       </Router>
