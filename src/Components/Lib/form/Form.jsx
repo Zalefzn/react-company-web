@@ -1,87 +1,83 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "./Form.css";
 import swal from "sweetalert";
-import {Link} from "react-router-dom";
-import ApiDataGet from "../api/Api";
+import {Link, useNavigate} from "react-router-dom";
 
-class FormLogin extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      cek: true,
-      judul: "Welcome Back",
-      sub: "Sign in your account",
-      value: "",
-      tampungData: [],
-    };
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-  }
 
-  handleSubmit = (e, event = this.state.value) => {
-    e.preventDefault();
-    if(event !== null){
-      ApiDataGet.getDataUser().then(result => {
-       this.setState = ({
-        tampungData: result,
-       });
-      })
-      swal({
-        title: "Success",
-        text: "Data Success",
-        icon: "success",
-      })
-    }      
-  }
-  
-  handleChange(event){
-      this.setState({
-        value: event.target.value,
-      });
-      console.info(event.target.value);
+function FormLogin(){
+
+  const [username, setUsername] = useState('');
+  const [password , setPassword] = useState('');
+
+  const navigate = useNavigate();
+
+  async function loginUser(){
+    console.info('data', username, password);
+    let item={username, password}
+    let result = await fetch("http://localhost:3004/login", {
+      method: "POST",
+      headers: {
+        'Content-type':'application/json',
+      },
+      body: JSON.stringify(item),
+    });
+    result= await result.json();
+    localStorage.setItem("user-info",  JSON.stringify(result));
+    swal({
+      title: '!Success',
+      text: 'Register Success',
+      icon: "success"
+    });
+    navigate("/HomeScreen");
   }
 
 
-  render() {
-    const { password, username, buttonName, forgetPass, haveAccount } = this.props;
-    return (
+  return (
       <div className="login-content">
         <div className="text-welcome">
-          <h2>{this.state.judul}</h2>
-          <p className="p-vol1-form">{this.state.sub}</p>
+          <h2>Welcome Back</h2>
+          <p className="p-vol1-form">Sign in your account</p>
         </div>
         <div className="login-items">
           <form>
-            <label>{username}</label>
+            <label>Username</label>
             <br></br>
             <br></br>
-            <input placeholder="your username..."type="text" onChange={this.handleChange}></input>
+            <input  value={username} placeholder="your username..."type="text" onChange={(data) => {
+              setUsername(data.target.value);
+            }}></input>
             <br></br>
             <br></br>
-            <label>{password}</label>
+            <label>Password</label>
             <br></br>
             <br></br>
-            <input placeholder="your password..."type="password"></input>
+            <input value={password} placeholder="your password..."type="password" onChange={(data) => {
+              setPassword(data.target.value);
+            }}></input>
             <br></br>
             <br></br>
-            <button className="btn-vol1-form"type="button" name="button" onClick={this.handleSubmit}>
-             <Link className="link-home" to ="/HomeScreen">{buttonName}</Link>
+            <button 
+            className="btn-vol1-form"
+            type="button" 
+            name="button" 
+            onClick={loginUser}
+            >
+              Login
             </button>
           </form>
         </div>
         <div className="forget-pass">
           <p className="p-vol2-form">
-            <Link className="link-forget"to="/ForgetPass">{forgetPass}</Link>
+            <Link className="link-forget"to="/ForgetPass">Forget password?</Link>
             </p>
         </div>
         <div className="have-account">
           <p className="p-vol3-form">
-            {haveAccount} <Link className="link-regis" to="/RegisterPage">Register</Link>
+            Don't have account ? <Link className="link-regis" to="/RegisterPage">Register</Link>
           </p>
         </div>
       </div>
     );
-  }
 }
 
 export default FormLogin;

@@ -10,6 +10,7 @@ class RegisterPage extends Component {
     }
   }
 
+
   render() {
     const { logo, bg, pict } = this.props;
     return (

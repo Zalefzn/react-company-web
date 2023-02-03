@@ -1,0 +1,95 @@
+{
+  "register": [
+    {
+      "id": "1",
+      "email": "Rizalfzn1660@gmail.com",
+      "username": "Rizal Fauzan",
+      "password": "rizalfauz166"
+    },
+    {
+      "email": "Rizalfauzan1700@gmail.com",
+      "username": "rizalfaa166",
+      "password": "rizal@12345",
+      "id": "PK0sLcE"
+    },
+    {
+      "email": "chnadra@test.com",
+      "username": "chandrakuy177",
+      "password": "chnadra1222",
+      "id": "t3UX6ju"
+    },
+    {
+      "email": "dimas@test.com",
+      "username": "dimas123yoo",
+      "password": "dimas123ahh",
+      "id": "f5fpE8G"
+    }
+  ],
+  "login": [
+    {
+      "id": "1",
+      "username": "Rizal Fauzan",
+      "password": "rizalfauz166"
+    },
+    {
+      "email": "rizalfaa166",
+      "password": "rizal@12345",
+      "id": "JepBT1u"
+    },
+    {
+      "email": "rizalfaa166",
+      "password": "rizal@12345",
+      "id": "Loi96Fh"
+    },
+    {
+      "email": "Rizal Fauzan",
+      "password": "rizalfauz166",
+      "id": "Jqmbs0P"
+    },
+    {
+      "email": "Rizal Fauzan",
+      "password": "rizalfauz166",
+      "id": "Ivft9tC"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "KzEVDW9"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "avwLo-m"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "Fmm1GuS"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "t5L2Y8o"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "xWf-aB5"
+    },
+    {
+      "email": "rizalfaa166",
+      "password": "rizalfau1222",
+      "id": "P1JXbcy"
+    },
+    {
+      "username": "dimas123yoo",
+      "password": "",
+      "id": "40NFuy6"
+    },
+    {
+      "username": "zale122",
+      "password": "zale122",
+      "id": "iOGtZ_6"
+    }
+  ]
+}
