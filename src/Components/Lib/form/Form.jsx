@@ -22,13 +22,14 @@ function FormLogin(){
       body: JSON.stringify(item),
     });
     result= await result.json();
-    localStorage.setItem("user-info",  JSON.stringify(result));
-    swal({
-      title: '!Success',
-      text: 'Register Success',
-      icon: "success"
-    });
-    navigate("/HomeScreen");
+    localStorage.setItem("user-info",  JSON.stringify(result))
+        swal({
+          title: '!Success',
+          text: 'Register Success',
+          icon: "success"
+        });
+        navigate("/HomeScreen");
+   
   }
 
 

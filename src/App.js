@@ -21,7 +21,7 @@ class App extends Component {
                   button1="Get Started"
                   image="gedung.png"
                   button2="Sign In"
-                />
+                />  
               }
             ></Route>
             <Route
