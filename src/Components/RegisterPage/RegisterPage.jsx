@@ -10,17 +10,17 @@ class RegisterPage extends Component {
     }
   }
 
-  componentDidMount(){
-    console.info('get data')
-  }
+  // componentDidMount(){
+  //   console.info('get data')
+  // }
 
-  componentDidUpdate(){
-    console.info('data update');
-  }
+  // componentDidUpdate(){
+  //   console.info('data update');
+  // }
 
-  componentWillUnmount(){
-    console.info('data terhapus')
-  }
+  // componentWillUnmount(){
+  //   console.info('data terhapus')
+  // }
 
 
   render() {

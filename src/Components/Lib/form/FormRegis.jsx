@@ -1,4 +1,5 @@
 import React, {useState}from 'react';
+import axios from 'axios';
 import {Link, useNavigate} from 'react-router-dom';
 import swal from 'sweetalert';
 import './FormRegis.css';
@@ -6,32 +7,26 @@ import './FormRegis.css';
  function FormRegis(){
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
-  const [username, setUsername] = useState('');
+  const [name, setName] = useState('');
   const [password, setPassword] = useState('');
 
-  async function handleSubmit(){
-   let dataUser = {
-    email,
-    username,
-    password
-   }
-   console.info(dataUser);
-      let postData = await fetch('http://localhost:3004/register',{
-          method: 'POST',
-          body: JSON.stringify(dataUser),
-          headers: {
-            'Content-type':'application/json',
-          }
+  const handleRegis = async(e) =>{
+    e.preventDefault();
+   try{
+      await axios.post("http://localhost:3001/client", {
+        name, 
+        email,
+        password,
       });
-      postData = await postData.json();
-      localStorage.setItem("user-info",  JSON.stringify(dataUser));
-      console.info('post data:', postData); 
       swal({
         title: '!Success',
-        text: 'Register Success',
-        icon: "success"
-      });
+        text: 'User Created',
+        icon: 'success',
+      })
       navigate('/LoginPage');
+   }catch(err){
+    console.info(err.message);
+   }
   }
 
 
@@ -42,20 +37,20 @@ import './FormRegis.css';
         <p className="p-vol1-form">Please register here...</p>
       </div>
       <div className="login-items-regis">
-        <form>
+        <form onSubmit={handleRegis}>
+          <label>Username</label>
+          <br></br>
+          <br></br>
+          <input value={name} placeholder="your username..." type="text" onChange={(data) => {
+            setName(data.target.value)
+          }}></input>
+          <br></br>
+          <br></br>
           <label>Email</label>
           <br></br>
           <br></br>
           <input value={email} placeholder="your email..." type="text" onChange={(data) => {
             setEmail(data.target.value)
-          }}></input>
-          <br></br>
-          <br></br>
-          <label>Username</label>
-          <br></br>
-          <br></br>
-          <input value={username} placeholder="your username..." type="text" onChange={(data) => {
-            setUsername(data.target.value)
           }}></input>
           <br></br>
           <br></br>
@@ -69,9 +64,8 @@ import './FormRegis.css';
           <br></br>
           <button
             className="btn-vol1-form"
-            type="button"
+            type="submit"
             name="button"
-            onClick={handleSubmit}
           >
            Register
           </button>

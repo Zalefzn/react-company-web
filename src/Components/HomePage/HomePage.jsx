@@ -29,7 +29,7 @@ class HomePage extends Component {
   getDataLogin(){
     ApiDataGet.getDataUser().then(result => {
       this.setState = ({
-       tampungData: result,
+        take: result,
       });
      })
   }

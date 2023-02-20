@@ -12,22 +12,22 @@ function FormLogin(){
   const navigate = useNavigate();
 
   async function loginUser(){
-    console.info('data', username, password);
-    let item={username, password}
-    let result = await fetch("http://localhost:3004/login", {
-      method: "POST",
-      headers: {
-        'Content-type':'application/json',
-      },
-      body: JSON.stringify(item),
-    });
-    result= await result.json();
-    localStorage.setItem("user-info",  JSON.stringify(result))
-        swal({
-          title: '!Success',
-          text: 'Register Success',
-          icon: "success"
-        });
+    // console.info('data', username, password);
+    // let item={username, password}
+    // let result = await fetch("http://localhost:3004/login", {
+    //   method: "POST",
+    //   headers: {
+    //     'Content-type':'application/json',
+    //   },
+    //   body: JSON.stringify(item),
+    // });
+    // result= await result.json();
+    // localStorage.setItem("user-info",  JSON.stringify(result))
+    //     swal({
+    //       title: '!Success',
+    //       text: 'Register Success',
+    //       icon: "success"
+    //     });
         navigate("/HomeScreen");
    
   }

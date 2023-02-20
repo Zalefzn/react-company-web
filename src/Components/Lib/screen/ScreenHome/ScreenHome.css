@@ -1,0 +1,37 @@
+:root {
+    --color-first: rgb(132, 0, 172);
+    --color-second: black;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+}
+
+.header-content{
+    margin: 40px;
+    padding: 20px;
+}
+
+ul{
+  float: right;
+  margin-top: -30px;
+}
+
+.i{
+    display: inline-block;
+    margin-left: 70px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.i-btn{
+    padding: 8px 50px;
+    border-radius: 30px;
+    border-style: none;
+    color: white;
+    background-image: linear-gradient(rgb(47, 0, 155),rgb(66, 0, 119));
+}
+
