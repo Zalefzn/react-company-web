@@ -1,35 +1,35 @@
 import React, { useState } from "react";
 import "./Form.css";
 import swal from "sweetalert";
+import axios from 'axios';
 import {Link, useNavigate} from "react-router-dom";
 
 
 function FormLogin(){
 
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password , setPassword] = useState('');
+  const [msg, setMsg] = useState('');
 
   const navigate = useNavigate();
 
   async function loginUser(){
-    // console.info('data', username, password);
-    // let item={username, password}
-    // let result = await fetch("http://localhost:3004/login", {
-    //   method: "POST",
-    //   headers: {
-    //     'Content-type':'application/json',
-    //   },
-    //   body: JSON.stringify(item),
-    // });
-    // result= await result.json();
-    // localStorage.setItem("user-info",  JSON.stringify(result))
-    //     swal({
-    //       title: '!Success',
-    //       text: 'Register Success',
-    //       icon: "success"
-    //     });
-        navigate("/HomeScreen");
-   
+    try {
+      await axios.post('http://localhost:3001/login', {
+          email: email,
+          password: password
+      });
+      swal({
+        title: "!Success",
+        text: "Success Login",
+        icon: "success",
+      })
+      navigate("/HomeScreen");
+  } catch (error) {
+      if (error.response) {
+          setMsg(error.response.data.msg);
+      }
+  }
   }
 
 
@@ -41,11 +41,11 @@ function FormLogin(){
         </div>
         <div className="login-items">
           <form>
-            <label>Username</label>
+            <label>Email</label>
             <br></br>
             <br></br>
-            <input  value={username} placeholder="your username..."type="text" onChange={(data) => {
-              setUsername(data.target.value);
+            <input  value={email} placeholder="your username..."type="text" onChange={(data) => {
+              setEmail(data.target.value);
             }}></input>
             <br></br>
             <br></br>

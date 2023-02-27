@@ -44,7 +44,7 @@ label{
 }
 
 input{
-    padding: 15px 120px;
+    padding: 15px 130px;
     border-radius: 30px;
     background: none;
     border-width: 2;
@@ -71,7 +71,8 @@ input{
     font-size: 16px;
     font-weight: 500;
     left: 75%;
-    margin-top: -20px;
+    margin-left: 30px;
+    margin-top:120px;
 }
 
 .link-regis{

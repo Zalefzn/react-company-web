@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
 import swal from 'sweetalert';
-import {Link} from 'axios';
 import './ScreenHome.css';
 
 class HomeScreens extends Component {

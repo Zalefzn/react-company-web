@@ -8,25 +8,30 @@ import './FormRegis.css';
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
+  const [confPassword, setConfPassword] = useState('');
+  const [msg, setMsg] = useState('');
   const [password, setPassword] = useState('');
 
   const handleRegis = async(e) =>{
     e.preventDefault();
-   try{
-      await axios.post("http://localhost:3001/client", {
-        name, 
-        email,
-        password,
-      });
-      swal({
-        title: '!Success',
-        text: 'User Created',
-        icon: 'success',
-      })
-      navigate('/LoginPage');
-   }catch(err){
-    console.info(err.message);
-   }
+    try {
+        await axios.post('http://localhost:3001/dataUsers', {
+            name: name,
+            email: email,
+            password: password,
+            confPassword: confPassword
+        });
+        swal({
+          title: "!Success",
+          text: "Success Register",
+          icon: "success",
+        })
+        navigate("/LoginPage");
+    } catch (error) {
+        if (error.response) {
+            setMsg(error.response.data.msg);
+        }
+    }
   }
 
 
@@ -59,6 +64,14 @@ import './FormRegis.css';
           <br></br>
           <input value={password} placeholder="your password..." type="password" onChange={(data) => {
             setPassword(data.target.value)
+          }}></input>
+          <br></br>
+          <br></br>
+          <label>Confirm Password</label>
+          <br></br>
+          <br></br>
+          <input value={confPassword} placeholder="Confirm password..." type="password" onChange={(data) => {
+            setConfPassword(data.target.value)
           }}></input>
           <br></br>
           <br></br>
