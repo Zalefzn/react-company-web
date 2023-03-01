@@ -2,8 +2,21 @@ import axios from 'axios';
 
 
 const getUrl = "http://localhost:3001";
+const getUsers = "https://myfakeapi.com";
 
 //get data
+
+const GetUsers = (path) => {
+  const promise = new Promise((resolve, reject) => {
+    axios.get(`${getUsers}/${path}`).then((res) => {
+      resolve(res.data);
+    }, (err) => {
+      reject(err);
+    });
+  });
+  return promise;
+}
+
 const Get = (path) => {
    const promise = new Promise((resolve, reject) => {
     axios.get(`${getUrl}/${path}`).then((res) => {
@@ -32,10 +45,12 @@ const postUser = (data) => Post('dataUsers', false, data )
 
 //get method
 const getDataUser =  () => Get('dataUsers');
+const getData = () => GetUsers('api/users/');
 
 const ApiDataGet =  {
     //get
     getDataUser,
+    getData,
 
     //post 
     postUser,

@@ -6,6 +6,7 @@ import RegisterPage from "./Components/RegisterPage/RegisterPage";
 import HomeScreens from "./Components/Lib/screen/ScreenHome/ScreenHome";
 import ForgetPass from "./Components/ForgetPass/ForgetPass";
 import VerificationPage from "./Components/Verification/Verification";
+import ScreenAbout from "./Components/Lib/screen/ScreenAbout/ScreenAbout";
 
 class App extends Component {
   render() {
@@ -38,6 +39,7 @@ class App extends Component {
             <ForgetPass
             />}></Route>
             <Route path="/Verification" element={<VerificationPage />}></Route>
+            <Route path="/About" element={ <ScreenAbout /> }></Route>
           </Routes>
         </Fragment>
       </Router>

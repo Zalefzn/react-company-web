@@ -1,0 +1,92 @@
+.content-about-page{
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+.about-page{
+    margin-top: 48%;
+    margin-bottom: 5%;
+}
+
+
+
+.desc-about-content{
+    position: absolute;
+    margin-top: -16%;
+    margin-left: 48%;
+    animation-name: animasi2;
+    animation-duration: 3s;
+}
+span{
+    color: black;
+}
+
+.a{
+    display: inline-block;
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(227, 227, 227);
+}
+
+.desc-about-content-vol2{
+    margin-left: 50%;
+    margin-top: -13%;
+    animation-name: animasi3;
+    animation-duration: 3s;
+}
+
+.image-about{
+    height: auto;
+    width: 600px;
+    margin-left: 4%;
+    animation-name: animasi1;
+    animation-duration: 3s;
+}
+
+.btn-color-about{
+    margin-top: 20px;
+    padding: 10px 50px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    border-style: none;
+    background: linear-gradient(rgb(47, 0, 155),rgb(66, 0, 119));
+}
+
+.text-about{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@keyframes animasi1 {
+    0%{
+        margin-left: 4%;
+    }
+
+    25%{
+        margin-left: 5%;
+    }
+}
+
+@keyframes animasi2 {
+    0%{
+        margin-left: 48%;
+    }
+
+    25%{
+        margin-left: 50%;
+    }
+}
+
+@keyframes animasi3 {
+    0%{
+        margin-left: 50%;
+    }
+
+    25%{
+        margin-left: 52%;
+    }
+}

@@ -10,19 +10,6 @@ class RegisterPage extends Component {
     }
   }
 
-  // componentDidMount(){
-  //   console.info('get data')
-  // }
-
-  // componentDidUpdate(){
-  //   console.info('data update');
-  // }
-
-  // componentWillUnmount(){
-  //   console.info('data terhapus')
-  // }
-
-
   render() {
     const { logo, bg, pict } = this.props;
     return (
