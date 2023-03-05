@@ -62,12 +62,16 @@ ul{
     float: right;
     margin-top: 10%;
     margin-right: 55px;
+    animation-name: animasiHome;
+    animation-duration: 2s;
 }
 
 .desc-content-home{
     margin-left: 3%;
     position: absolute;
     margin-top: 12%;
+    animation-name: animasiHome2;
+    animation-duration: 3s;
 }
 
 .desc-content-vol1{
@@ -89,5 +93,28 @@ ul{
     border-radius: 30px;
     border-style: none;
     background: linear-gradient(rgb(47, 0, 155),rgb(66, 0, 119));
+}
+
+
+@keyframes animasiHome {
+    0%{
+        margin-right: 55px;
+        opacity: 0;
+    }
+    25%{
+        margin-right: 70px;
+        opacity: 0.8;
+    }
+}
+
+@keyframes animasiHome2 {
+    0%{
+        margin-left: 3%;
+        opacity: 0;
+    }
+    25%{
+        margin-left: 4%;
+        opacity: 0.8;
+    }
 }
 
