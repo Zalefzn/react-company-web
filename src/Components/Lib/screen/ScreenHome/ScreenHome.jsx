@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import './ScreenHome.css';
 import ApiDataGet from "../../api/Api";
 import ScreenAbout from "../ScreenAbout/ScreenAbout";
+import ScreenServ from "../ScreenServices/ScreenServ";
 
 class HomeScreens extends Component {
   constructor(props){
@@ -85,6 +86,7 @@ class HomeScreens extends Component {
           </div>
         </div>
         <ScreenAbout />
+        <ScreenServ />
       </Fragment>
     );
   }
