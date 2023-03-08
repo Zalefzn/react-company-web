@@ -1,0 +1,95 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+}
+
+.content-page-servis{
+    text-align: center;
+    margin-top: 15%;
+}
+
+.content-prg-servis{
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+.content-prg2-servis{
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #c6c6c6;
+}
+
+.card-servis{
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 500px;
+    width: 1000px;
+    background-color: #ffffff;
+    box-shadow:10px 10px 5px rgb(171, 171, 171) ;
+}
+
+.item-servis-page{
+    position: absolute;
+    margin-top: 6%;
+}
+
+.ul-servis-li-vol1{
+    margin: auto;
+    margin-right: 20%;
+}
+
+.ul-servis-li-vol2{
+    margin: auto;
+    margin-top: 10%;
+    margin-right: 20%;
+}
+
+.img-servis-react{
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.react-img{
+    transition-duration: 1s;
+    height: auto;
+    width: 100px;
+}
+
+.react-img:hover{
+    filter:grayscale(100%);
+}
+
+.vue-img{
+    transition-duration: 1s;
+    height: auto;
+    width: 100px;
+}
+
+.vue-img:hover{
+    filter:grayscale(100%);
+}
+
+.flutter-img{
+    transition-duration: 1s;
+    height: auto;
+    width: 100px;
+}
+
+.flutter-img:hover{
+    filter:grayscale(100%);
+}
+
+.php-img{
+    transition-duration: 1s;
+    height: auto;
+    width: 100px;
+}
+
+.php-img:hover{
+    filter:grayscale(100%);
+}
+
