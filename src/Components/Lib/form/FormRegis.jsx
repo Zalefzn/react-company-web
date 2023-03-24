@@ -33,7 +33,7 @@ import './FormRegis.css';
         }
     }
   }
-
+  
 
   return (
     <div className="login-content">

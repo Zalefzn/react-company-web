@@ -1,17 +1,29 @@
 import React, {Component} from 'react';
 import './ScreenServ.css';
+import axios from 'axios';
+
 
 class ScreenServ extends Component{
     constructor(props){
         super(props);
         this.state = {
-
+            person : [],
+            data: [],
         }
     }
 
+    componentDidMount(){
 
+    }
+
+    componentDidUpdate(){
+
+    }
+    
+
+    
     render(){
-        return(
+        return( 
             <div className="content-servis">
                 <div className="content-page-servis">
                     <h1 className="content-prg-servis">
@@ -21,9 +33,9 @@ class ScreenServ extends Component{
                         Techkuy is constantly growing its skillsets to deliver you top-notch reliable software development.
                     </p>
                 </div>
-                <div className="card-servis">
+                <div className="card-servis">   
                     <div className="item-servis-page">
-                        <ul className="ul-servis-li-vol1">
+                        <ul className="ul-servis-li-vol1">  
                             <li className="img-servis-react"><img className="react-img" src="react.png" alt=""></img></li>
                             <li className="img-servis-react"><img className="vue-img" src="vue.png" alt=""></img></li>
                             <li className="img-servis-react"><img className="flutter-img" src="flutter.png" alt=""></img></li>
@@ -35,6 +47,13 @@ class ScreenServ extends Component{
                             <li className="img-servis-react"><img className="flutter-img" src="golang.png" alt=""></img></li>
                             <li className="img-servis-react"><img className="php-img" src="mysql.png" alt=""></img></li>
                         </ul>
+                    </div>
+                </div>
+                
+                 {/*Services Product Content*/}
+                <div className="service-product">
+                    <div className="product-items">
+                        
                     </div>
                 </div>
             </div>
