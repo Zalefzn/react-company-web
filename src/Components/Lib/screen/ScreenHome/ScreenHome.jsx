@@ -79,7 +79,7 @@ class HomeScreens extends Component {
                   Techkuy is Your Best Solution in doing Business
                 </p>
                 <button type="Button" name="button" className="button-content-home">
-                 Employee
+                 <Link to="/Dash">Employee</Link>
                 </button>
               </div>
             </div>

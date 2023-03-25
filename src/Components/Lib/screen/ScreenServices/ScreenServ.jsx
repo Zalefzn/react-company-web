@@ -8,17 +8,17 @@ class ScreenServ extends Component{
         super(props);
         this.state = {
             person : [],
-            data: [],
         }
     }
 
     componentDidMount(){
-
+        
     }
 
     componentDidUpdate(){
 
     }
+
     
 
     

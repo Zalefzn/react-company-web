@@ -8,6 +8,7 @@ import ForgetPass from "./Components/ForgetPass/ForgetPass";
 import VerificationPage from "./Components/Verification/Verification";
 import ScreenAbout from "./Components/Lib/screen/ScreenAbout/ScreenAbout";
 import ScreenServ from "./Components/Lib/screen/ScreenServices/ScreenServ";
+import DashboardUser from "./Components/Lib/screen/Dashboard/Dashboard";
 
 class App extends Component {
   render() {
@@ -42,6 +43,7 @@ class App extends Component {
             <Route path="/Verification" element={<VerificationPage />}></Route>
             <Route path="/About" element={ <ScreenAbout /> }></Route>
             <Route path="/Serv" element={<ScreenServ />}></Route>
+            <Route path="/Dash" element={<DashboardUser />}></Route>
           </Routes>
         </Fragment>
       </Router>

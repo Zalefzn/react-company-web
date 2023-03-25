@@ -95,6 +95,16 @@ ul{
     background: linear-gradient(rgb(47, 0, 155),rgb(66, 0, 119));
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+
 
 @keyframes animasiHome {
     0%{
