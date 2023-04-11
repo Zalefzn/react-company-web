@@ -1,4 +1,6 @@
-import react, {Component, Fragment} from 'react';
+import React, {Component, Fragment} from 'react';
+import axios from 'axios';
+import ApiDataGet from '../../api/Api';
 
 
 class DashboardUser extends Component{
@@ -9,14 +11,39 @@ class DashboardUser extends Component{
         }
     }
 
+    componentDidMount(){
+       
+        try{    
+            
+        }catch(err){
+            console.info(err);
+        }
+    }
+
+    componentDidUpdate(){ 
+        
+    }
+
+    categoryPage = (value) => {
+        try{
+            
+        }catch(err){
+            console.info(err);
+        }
+    }
+
+    
+    
 
     render(){
         return(
-            <div>
-                <p className="container-dashboard">
-                    Dashboard User
-                </p>
-            </div>
+            <Fragment>
+                <div className="container-dashboard-page">
+                    <div className="dashboard-content">
+                        
+                    </div>
+                </div>
+            </Fragment>
         );
     }
 }
