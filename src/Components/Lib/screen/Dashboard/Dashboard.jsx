@@ -31,8 +31,6 @@ class DashboardUser extends Component{
             console.info(err);
         }
     }
-
-    
     
 
     render(){
