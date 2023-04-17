@@ -1,5 +1,7 @@
 import React, {Component, Fragment} from 'react';
+import {Link} from 'react-router-dom';
 import axios from 'axios';
+import './Dashboard.css';
 import ApiDataGet from '../../api/Api';
 
 
@@ -12,7 +14,7 @@ class DashboardUser extends Component{
     }
 
     componentDidMount(){
-       
+        
         try{    
             
         }catch(err){
@@ -32,22 +34,24 @@ class DashboardUser extends Component{
         }
     }
 
-
+    
     render(){
         return(
             <Fragment>
-                {/*header content*/}
-                <div className="container-dashboard-page">
-                    <div className="logo-dashboard">
-                        <h2 className="dashboard-text">Dashboard</h2>
+                <div>
+                    {/*header content*/}
+                    <div className="container-dashboard-page">
+                        <ul className="list-item-header">
+                            <li className="list-items-dashboard"><h2 className="dashboard-text">Dashboard</h2></li>
+                            <li className="list-items-button"><button type="button" name="button" className="btn-btn-back"><Link to="/HomeScreen">Back</Link></button></li>
+                        </ul>
                     </div>
-                    <div className="btn-back">
-                        <button type="button" name="button" className="btn-btn-back">Back</button>
-                    </div>
-                </div>
 
-                {/* Body Content */}
-                
+                    {/* Body Content */}
+                    <div className="body-content-dashboard">
+
+                    </div>
+                </div>  
             </Fragment>
         );
     }

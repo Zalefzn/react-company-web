@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+.container-dashboard-page{
+    position: absolute;
+    margin-top: 20px
+}
+
+.list-item-header{
+    margin-top: 20px;
+}
+
+.dashboard-text{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.btn-btn-back{
+    padding: 8px 50px;
+    border-radius: 30px;
+    border-style: none;
+    color: white;
+    background-image: linear-gradient(rgb(47, 0, 155),rgb(66, 0, 119));
+}
+
+.list-items-dashboard{
+   position: absolute;
+   display: inline;
+   margin-left: 50px;
+}
+
+.list-items-button{
+    position: absolute;
+    display: inline;
+    margin-left: 1670px;
+}
