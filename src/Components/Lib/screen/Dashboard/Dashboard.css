@@ -19,9 +19,11 @@
 }
 
 .btn-btn-back{
-    padding: 8px 50px;
+    padding: 9px 50px;
     border-radius: 30px;
     border-style: none;
+    font-size: 25px;
+    font-weight: bold;
     color: white;
     background-image: linear-gradient(rgb(47, 0, 155),rgb(66, 0, 119));
 }

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import './ScreenServ.css';
 import axios from 'axios';
 
@@ -20,11 +20,10 @@ class ScreenServ extends Component{
     }
 
     
-
-    
     render(){
         return( 
-            <div className="content-servis">
+            <Fragment>
+                <div className="content-servis">
                 <div className="content-page-servis">
                     <h1 className="content-prg-servis">
                         TOOLS & TECH OUR TEAM OF EXPERTS USE
@@ -57,6 +56,7 @@ class ScreenServ extends Component{
                     </div>
                 </div>
             </div>
+            </Fragment>
         );
     }
 }

@@ -12,7 +12,7 @@ class DashboardUser extends Component{
             absensi: [],
         }
     }
-
+    
     componentDidMount(){
         
         try{    
@@ -33,7 +33,7 @@ class DashboardUser extends Component{
             console.info(err);
         }
     }
-
+    
     
     render(){
         return(
