@@ -15,22 +15,30 @@ function FormLogin(){
   
   async function loginUser(){
     try {
+     if(email &&  password){
       await axios.post('http://localhost:3001/login', {
-          email: email,
-          password: password
-      });
-      swal({
-        title: "!Success",
-        text: "Success Login",
-        icon: "success",
-      })
-      navigate("/HomeScreen");
+        email: email,
+        password: password
+    });
+    swal({
+      title: "!Success",
+      text: "Success Login",
+      icon: "success",
+    })
+    navigate("/HomeScreen");
+     } else {
+        swal({
+          title: "!Warning",
+          text: "Login Failed",
+          icon: "warning",
+        })
+     }
   } catch (error) {
       if (error.response) {
           setMsg(error.response.data.msg);
       }
   }
-  }
+}
 
 
   return (
