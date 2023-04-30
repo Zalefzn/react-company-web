@@ -22,16 +22,18 @@ function FormLogin(){
     });
     swal({
       title: "!Success",
-      text: "Success Login",
+      text: `${email}`,
       icon: "success",
-    })
+    });
     navigate("/HomeScreen");
-     } else {
+     }else {
+       if(email || password === ""){
         swal({
           title: "!Warning",
-          text: "Login Failed",
+          text: "Fill Your Email & password!",
           icon: "warning",
-        })
+        });
+       }
      }
   } catch (error) {
       if (error.response) {
