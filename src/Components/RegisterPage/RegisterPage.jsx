@@ -14,6 +14,7 @@ class RegisterPage extends Component {
     const { logo, bg, pict } = this.props;
     return (
       <Fragment>
+      
         <div className="container-regis-page">
           <div className="content-regis">
             <div className="content-image-regis">

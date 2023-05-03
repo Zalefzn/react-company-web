@@ -1,4 +1,5 @@
 import React, {Component, Fragment} from 'react';
+import CardServ from './CardServ';
 import './ScreenServ.css';
 import axios from 'axios';
 
@@ -10,17 +11,20 @@ class ScreenServ extends Component{
             person : [],
         }
     }
-    
+
     componentDidMount(){
         
     }
 
     componentDidUpdate(){
-
+        
     }
 
     addItems = async(value) =>{
-        
+        await axios.get()
+        .then(res => {
+            
+        })
     }   
 
     
@@ -57,7 +61,9 @@ class ScreenServ extends Component{
                 <div className="service-product">
                     <div className="product-items">
                         <div className="item-first">
-                            
+                           <CardServ 
+
+                           />
                         </div>
                     </div>
                 </div>
