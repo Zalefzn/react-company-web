@@ -1,0 +1,59 @@
+
+.list-cards{
+    display: flex;
+    position: absolute;
+    margin: auto;
+}
+
+.cards{
+    background-color: white;
+    border-radius: 30px;
+    height: 350px;
+    width: 300px;
+    box-shadow:10px 10px 5px rgb(171, 171, 171) ;
+}
+
+.cards:hover{
+    color: white;
+    background-image: linear-gradient(rgb(47, 0, 155),rgb(66, 0, 119));
+    border-radius: 30px;
+    height: 350px;
+    width: 300px;
+    box-shadow:10px 10px 5px rgb(171, 171, 171);
+    transform: scale(115%);
+}
+
+.header-cards{
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.desc-cards{
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight:500;
+}
+
+
+/* @keyframes animasi1 {
+    0%{
+       
+            background-color: white;
+            border-radius: 30px;
+            height: 350px;
+            width: 300px;
+            box-shadow:10px 10px 5px rgb(171, 171, 171) ;
+       
+    }
+
+    25%{
+       
+            background-color: rgb(87, 0, 145);
+            border-radius: 30px;
+            height: 350px;
+            width: 300px;
+            box-shadow:10px 10px 5px rgb(171, 171, 171) ;
+        
+    }
+} */

@@ -61,8 +61,18 @@ class ScreenServ extends Component{
                 <div className="service-product">
                     <div className="product-items">
                         <div className="item-first">
-                           <CardServ 
-
+                           <CardServ
+                           id="1"
+                           />
+                        </div>
+                        <div className="item-second">
+                           <CardServ
+                           id="2"
+                           />
+                        </div>
+                        <div className="item-third">
+                           <CardServ
+                           id="3"
                            />
                         </div>
                     </div>

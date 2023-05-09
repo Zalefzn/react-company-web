@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from "react";
 import swal from 'sweetalert';
 import {Link} from 'react-router-dom';
+import axios from 'axios';
 import './ScreenHome.css';
-import ApiDataGet from "../../api/Api";
 import ScreenAbout from "../ScreenAbout/ScreenAbout";
 import ScreenServ from "../ScreenServices/ScreenServ";
 
@@ -16,23 +16,14 @@ class HomeScreens extends Component {
   }
 
   componentDidMount(){
-    try{
-      ApiDataGet.getData().then((res) => {
-        this.setState({
-          data: res,
-        });
-        console.log(res);
-      })
-    }catch(err){
-      console.info(err.message);
-    }
+    
   }
 
   logoutUser(e){
     e.preventDefault(); 
     swal({
       title: '!Success',
-      text: 'Logout Success!',
+      text: `Logout Success!`,
       icon: 'success',
     })
   }
@@ -42,7 +33,6 @@ class HomeScreens extends Component {
     return (
       <Fragment>
         <div className="home-screen-container">
-
           {/*Header Navbar Content*/}
           <div className="header-content"> 
             <div className="image-header-logo">

@@ -93,3 +93,28 @@
     filter:grayscale(100%);
 }
 
+.product-items{
+    position: absolute;
+    margin-top: 15%;
+    margin-left: 19%;
+    display: inline-block;
+    height: 500px;
+    width: 1180px;
+}
+
+.item-first{
+    position: absolute;
+    margin-left: 30px;
+}
+
+.item-second{
+    position: absolute;
+    margin-left: 400px;
+}
+
+.item-third{
+    position: absolute;
+    margin-left: 770px;
+}
+
+

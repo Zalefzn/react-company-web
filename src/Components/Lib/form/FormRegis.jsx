@@ -14,24 +14,54 @@ import './FormRegis.css';
 
   const handleRegis = async(e) =>{
     e.preventDefault();
-    try {
+
+    try{
+      if(name && email && password && confPassword){
         await axios.post('http://localhost:3001/dataUsers', {
-            name: name,
-            email: email,
-            password: password,
-            confPassword: confPassword
+          name: name,
+          email: email,
+          password: password,
+          confPassword: confPassword,
         });
+         
         swal({
           title: "!Success",
-          text: "Success Register",
-          icon: "success",
-        })
+          text: `Your Data is Confirmed!`,
+          icon: 'success',
+        });
+
         navigate("/LoginPage");
-    } catch (error) {
-        if (error.response) {
-            setMsg(error.response.data.msg);
-        }
+    } else {
+      if(name || email || password || confPassword === ""){
+        swal({
+          title: "!Warning",
+          text: `Fill Your Data Please!`,
+          icon: "warning"
+        });
+      }
     }
+    } catch(err){
+      console.info(err);
+    }
+    
+    // try {
+    //     await axios.post('http://localhost:3001/dataUsers', {
+    //         name: name,
+    //         email: email,
+    //         password: password,
+    //         confPassword: confPassword
+    //     });
+    //     swal({
+    //       title: "!Success",
+    //       text: "Success Register",
+    //       icon: "success",
+    //     })
+    //     navigate("/LoginPage");
+    // } catch (error) {
+    //     if (error.response) {
+    //         setMsg(error.response.data.msg);
+    //     }
+    // }
   }
   
 
