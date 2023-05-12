@@ -9,9 +9,11 @@ const CardServ = (id) => {
   const listItems = cardConnect.map(card => 
      <div className="list-card-item">
       <div className="list-cards">
-        <div className="cards">    
+        <div className="cards">
+          <img className="image-data-card" src={card.image} alt=""></img>
           <h3 className="header-cards">{card.header}</h3>
-          <p className="desc-cards">{card.desc}</p>  
+          <p className="desc-cards">{card.desc.a}</p>
+          <p className="desc-cards-2">{card.desc.b}</p>
         </div>
       </div>
      </div>

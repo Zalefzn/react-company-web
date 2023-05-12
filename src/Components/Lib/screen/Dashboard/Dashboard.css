@@ -39,3 +39,9 @@
     display: inline;
     margin-left: 1670px;
 }
+
+.section-page{
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 4.5%;
+}

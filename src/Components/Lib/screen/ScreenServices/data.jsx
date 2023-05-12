@@ -1,20 +1,29 @@
 export const card = [
   {
     id: "1",
-    image: null,
+    image: "settings_black.png",
     header: 'Mobile Development',
-    desc: 'Find Your Insight &\nPassive Income with us',
+    desc: {
+      a: "Find Your Insight &",
+      b: "Passive Income With us"
+    }
   },
   {
     id: "2",
-    image: null,
+    image: "settings_black.png",
     header: 'Web Development',
-    desc: 'Find Your Insight & Passive Income with us'
+    desc: {
+      a: "Find Your Insight &",
+      b: "Passive Income With us"
+    }
   },
   {
     id:"3",
-    image: null,
+    image: "settings_black.png",
     header: 'UI/UX Designer',
-    desc: 'Find Your Insight'
+    desc: {
+      a: "Find Your Insight &",
+      b: "Passive Income With us"
+    }
   },
 ]

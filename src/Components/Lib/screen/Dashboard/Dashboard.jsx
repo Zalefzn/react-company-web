@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import axios from 'axios';
 import './Dashboard.css';
 import ApiDataGet from '../../api/Api';
+import CardCateg from './CategCard';
 
 
 class DashboardUser extends Component{
@@ -46,11 +47,17 @@ class DashboardUser extends Component{
                             <li className="list-items-button"><button type="button" name="button" className="btn-btn-back"><Link to="/HomeScreen">Back</Link></button></li>
                         </ul>
                     </div>
-
-                    {/* Body Content */}
-                    <div className="body-content-dashboard">
-
-                    </div>
+                        
+                    {/* Body Content */}    
+                    <section className="section-page">
+                        <div className="section-category">
+                           <div className="card-category">
+                                <CardCateg
+                                   id="1"
+                                />
+                           </div>
+                        </div>
+                    </section>
                 </div>  
             </Fragment>
         );
