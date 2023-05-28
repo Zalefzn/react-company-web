@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./HomePage.css";
 import swal from "sweetalert";
+import axios from 'axios';
 import {Link} from'react-router-dom';
 import ApiDataGet from "../Lib/api/Api";
 
@@ -15,6 +16,18 @@ class HomePage extends Component {
     };
     this.handleAlert = this.handleAlert.bind(this);
     this.getDataLogin = this.getDataLogin.bind(this);
+  }
+  
+  componentDidMount(){
+    try{
+      axios.get().then((res) => {
+        this.setState = {
+          take: res.data,
+        }
+      })
+    }catch(err){
+      console.info(err);
+    }
   }
 
   handleAlert(e) {

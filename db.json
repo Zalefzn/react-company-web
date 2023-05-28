@@ -1,182 +1,32 @@
 {
-  "register": [
+  "category" : [
     {
-      "id": "1",
-      "email": "Rizalfzn1660@gmail.com",
-      "username": "Rizal Fauzan",
-      "password": "rizalfauz166"
+      "id" : 1,
+      "name" : "Dashboard"
     },
     {
-      "email": "Rizalfauzan1700@gmail.com",
-      "username": "rizalfaa166",
-      "password": "rizal@12345",
-      "id": "PK0sLcE"
+      "id" : 2,
+      "name" : "Absensi"
     },
     {
-      "email": "chnadra@test.com",
-      "username": "chandrakuy177",
-      "password": "chnadra1222",
-      "id": "t3UX6ju"
+      "id" : 3,
+      "name" : "Data Karyawan"
     },
     {
-      "email": "dimas@test.com",
-      "username": "dimas123yoo",
-      "password": "dimas123ahh",
-      "id": "f5fpE8G"
-    },
-    {
-      "email": "",
-      "username": "",
-      "password": "",
-      "id": "ODAXfXB"
-    },
-    {
-      "email": "",
-      "username": "",
-      "password": "",
-      "id": "aCkyiMT"
+      "id" : 4,
+      "name" : "List Tugas"
     }
   ],
-  "login": [
+  "data" : [
     {
-      "id": "1",
-      "username": "Rizal Fauzan",
-      "password": "rizalfauz166"
-    },
-    {
-      "email": "rizalfaa166",
-      "password": "rizal@12345",
-      "id": "JepBT1u"
-    },
-    {
-      "email": "rizalfaa166",
-      "password": "rizal@12345",
-      "id": "Loi96Fh"
-    },
-    {
-      "email": "Rizal Fauzan",
-      "password": "rizalfauz166",
-      "id": "Jqmbs0P"
-    },
-    {
-      "email": "Rizal Fauzan",
-      "password": "rizalfauz166",
-      "id": "Ivft9tC"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "KzEVDW9"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "avwLo-m"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "Fmm1GuS"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "t5L2Y8o"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "xWf-aB5"
-    },
-    {
-      "email": "rizalfaa166",
-      "password": "rizalfau1222",
-      "id": "P1JXbcy"
-    },
-    {
-      "username": "dimas123yoo",
-      "password": "",
-      "id": "40NFuy6"
-    },
-    {
-      "username": "zale122",
-      "password": "zale122",
-      "id": "iOGtZ_6"
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": "9QaAL2x"
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": "v7BlSpr"
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": "G2c2CtF"
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": "SvsG1j5"
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": "OuWd12Q"
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": "-555YWK"
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": "bggOMik"
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": "PzaU-AZ"
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": "y3LK7Bg"
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": "6CkO-gd"
-    },
-    {
-      "username": "rizaldika12",
-      "password": "rizal1212",
-      "id": "_d3tcaf"
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": "nFZkPfH"
-    },
-    {
-      "username": "dimas12skuy",
-      "password": "dimas123",
-      "id": "O_pyO5y"
-    },
-    {
-      "username": "bahrul12",
-      "password": "bahrul1234",
-      "id": "77uaaUR"
-    },
-    {
-      "username": "fauzanzim",
-      "password": "fauzan123",
-      "id": "5OUGVxg"
+      "id" : 1,
+      "name" : "Rizal Fauzan",
+      "jurusan" : "Siste, Informasi",
+      "kampus" : "ARS University",
+      "category" : {
+        "id" : 1,
+        "name" : "Dashboard"
+      }
     }
   ]
 }

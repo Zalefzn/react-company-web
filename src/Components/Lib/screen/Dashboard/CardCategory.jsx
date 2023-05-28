@@ -1,24 +1,51 @@
-const CategoryCard = [
+export const  CategoryCard = [
     {
         id: "1",
-        category_name: "Dashboard"
+        category_name: "Dashboard",
     },
     {
-        id: "1",
-        category_name: "Absensi"
+        id: "2",
+        category_name: "Absensi",
     },
     {
-        id: "1",
-        category_name: "Cuti"
+        id: "3",
+        category_name: "Cuti",
     },
     {
-        id: "1",
-        category_name: "Tugas"
+        id: "4",
+        category_name: "Tugas",
     },
     {
-        id:"1",
-        category_name: "Data Karyawan"
+        id:"5",
+        category_name: "Data Karyawan",
     },
 ]
 
-export default CategoryCard;
+export const FillCateg = [
+    {
+        id: "1",
+        data: [
+           {
+                name : "Rizal Fauzan",
+                address: "Bandung",
+                jurusan : "Teknik Informatika",
+                kampus : "Ars University",
+                usia: "23 Tahun"
+            }
+        ],
+    },
+    {
+        id: "2",
+        data: [
+           {
+                name : "Bagas Suryo",
+                address: "Jakarta",
+                jurusan : "Teknik Informatika",
+                kampus : "Ars University",
+                usia: "21 Tahun"
+            }
+        ],
+    }, 
+
+]
+

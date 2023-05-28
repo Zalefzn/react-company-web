@@ -11,18 +11,23 @@ class DashboardUser extends Component{
         super(props);
         this.state = {
             absensi: [],
+            value: "data",
         }
     }
     
-    componentDidMount(){
-        
+     componentDidMount(){
         try{    
-            
+            axios.get('https://jsonplaceholder.typicode.com/users')
+            .then(function(res){ 
+              this.setState = {
+                absensi: res.data,
+              }
+            })
         }catch(err){
             console.info(err);
         }
     }
-
+    
     componentDidUpdate(){ 
         
     }
@@ -34,6 +39,7 @@ class DashboardUser extends Component{
             console.info(err);
         }
     }
+
     
     
     render(){
@@ -52,9 +58,8 @@ class DashboardUser extends Component{
                     <section className="section-page">
                         <div className="section-category">
                            <div className="card-category">
-                                <CardCateg
-                                   id="1"
-                                />
+                                <CardCateg 
+                                id="1"/>
                            </div>
                         </div>
                     </section>
