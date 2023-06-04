@@ -7,9 +7,10 @@ import axios from 'axios';
 
 const urlApi = "http://localhost:3004/";
 const handleButton = (id) => {
-    try{
-        axios.get(urlApi + "data").then((res) => {
-            console.info(res.data);
+     try{
+         axios.get(urlApi + "data?category=" + id).then((res) => {
+                const dataItem = res.data;
+                    console.info(dataItem);
         });
     }catch(err){
         console.info(err);
@@ -21,12 +22,12 @@ const handleButton = (id) => {
     })
  } 
 
-const CardCateg = (id) => {
+const CardCateg = (id, absensi) => {
     const categorys = CategoryCard.filter(cards => 
     cards.id === id.id);
     const listItemCateg = categorys.map(cards =>
-        <Fragment>
-            <div className="card-categ">
+        <Fragment key={id}>
+            <div className="card-categ" >
                 <div className="card-item-categ" onClick={handleButton}>
                     <h3 className="text-card-categ">{cards.category_name}</h3>
                 </div>

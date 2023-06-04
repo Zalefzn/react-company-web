@@ -10,19 +10,22 @@ class DashboardUser extends Component{
     constructor(props){
         super(props);
         this.state = {
+            dashboard: [],
             absensi: [],
             value: "data",
         }
     }
     
-     componentDidMount(){
+    componentDidMount(){
         try{    
             axios.get('https://jsonplaceholder.typicode.com/users')
-            .then(function(res){ 
-              this.setState = {
-                absensi: res.data,
-              }
-            })
+                .then((res) => { 
+                    const absensi = res.data;
+                    this.setState({
+                        absensi
+                    })
+                }
+            )
         }catch(err){
             console.info(err);
         }
@@ -32,17 +35,20 @@ class DashboardUser extends Component{
         
     }
 
-    categoryPage = (value) => {
+    categoryPage = async(value) => {
         try{
-            
+            await axios.get().then((res) => {
+                
+            })
         }catch(err){
             console.info(err);
         }
     }
+    
 
-    
-    
     render(){
+
+        const { absensi } = this.state;
         return(
             <Fragment>
                 <div>
@@ -58,12 +64,19 @@ class DashboardUser extends Component{
                     <section className="section-page">
                         <div className="section-category">
                            <div className="card-category">
-                                <CardCateg 
+                                <CardCateg
+                                absensi= {absensi}
                                 id="1"/>
                            </div>
                         </div>
                     </section>
-                </div>  
+                </div>
+
+                <div className="absensi-page">
+                    <div className="absensi">
+                        
+                    </div>
+                </div>
             </Fragment>
         );
     }
