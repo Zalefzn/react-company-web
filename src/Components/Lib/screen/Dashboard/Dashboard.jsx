@@ -4,12 +4,15 @@ import axios from 'axios';
 import './Dashboard.css';
 import ApiDataGet from '../../api/Api';
 import CardCateg from './CategCard';
+import ContentAbs from './ContentAbs';
+
 
 
 class DashboardUser extends Component{
     constructor(props){
         super(props);
         this.state = {
+            category: [],
             dashboard: [],
             absensi: [],
             value: "data",
@@ -18,37 +21,36 @@ class DashboardUser extends Component{
     
     componentDidMount(){
         try{    
-            axios.get('https://jsonplaceholder.typicode.com/users')
+            axios.get(`http://localhost:3004/data?category/id=` + 1)
                 .then((res) => { 
                     const absensi = res.data;
                     this.setState({
                         absensi
-                    })
+                    });
+                    console.info(absensi);
                 }
             )
         }catch(err){
             console.info(err);
         }
     }
-    
-    componentDidUpdate(){ 
-        
-    }
 
-    categoryPage = async(value) => {
+    handleCategory(){
         try{
-            await axios.get().then((res) => {
-                
+            axios.get('http://localhost:3004/category').then((res) => {
+                const category = res.data;
+                this.setState = {
+                    category
+                }
             })
         }catch(err){
-            console.info(err);
+            console.info(err)
         }
     }
-    
+
 
     render(){
-
-        const { absensi } = this.state;
+        const { absensi, category } = this.state;
         return(
             <Fragment>
                 <div>
@@ -65,17 +67,12 @@ class DashboardUser extends Component{
                         <div className="section-category">
                            <div className="card-category">
                                 <CardCateg
-                                absensi= {absensi}
-                                id="1"/>
+                                absensi = {absensi}
+                                category = {category}
+                                id="2"/>
                            </div>
                         </div>
                     </section>
-                </div>
-
-                <div className="absensi-page">
-                    <div className="absensi">
-                        
-                    </div>
                 </div>
             </Fragment>
         );

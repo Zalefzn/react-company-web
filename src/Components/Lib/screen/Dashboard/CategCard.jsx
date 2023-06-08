@@ -22,19 +22,16 @@ const handleButton = (id) => {
     })
  } 
 
-const CardCateg = (id, absensi) => {
-    const categorys = CategoryCard.filter(cards => 
-    cards.id === id.id);
-    const listItemCateg = categorys.map(cards =>
-        <Fragment key={id}>
+const CardCateg = (props) => {
+    return(
+        <Fragment key={props.id}>
             <div className="card-categ" >
                 <div className="card-item-categ" onClick={handleButton}>
-                    <h3 className="text-card-categ">{cards.category_name}</h3>
+                    <h3 className="text-card-categ">hello</h3>
                 </div>
             </div>
         </Fragment>
-        );
-    return <ul>{listItemCateg}</ul> 
+    )
 }
 
 export default CardCateg;
