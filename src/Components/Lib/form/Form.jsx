@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./Form.css";
 import swal from "sweetalert";
 import axios from 'axios';
@@ -7,6 +7,7 @@ import {Link, useNavigate} from "react-router-dom";
 
 function FormLogin(){
 
+  const inputRef = useRef('');
   const [email, setEmail] = useState('');
   const [password , setPassword] = useState('');
   const [msg, setMsg] = useState('');
@@ -14,6 +15,7 @@ function FormLogin(){
   const navigate = useNavigate();
   
   async function loginUser(){
+    inputRef.current.focus();
     try {
      if(email &&  password){
       await axios.post('http://localhost:3001/login', {
@@ -35,9 +37,9 @@ function FormLogin(){
         });
        }
      }
-  } catch (error) {
-      if (error.response) {
-          setMsg(error.response.data.msg);
+  } catch (msg) {
+      if (msg.response) {
+          setMsg(msg.response.data.msg);
       }
   }
 }
@@ -54,7 +56,7 @@ function FormLogin(){
             <label>Email</label>
             <br></br>
             <br></br>
-            <input  value={email} placeholder="your username..."type="text" onChange={(data) => {
+            <input ref={inputRef} value={email} placeholder="your username..."type="text" onChange={(data) => {
               setEmail(data.target.value);
             }}></input>
             <br></br>
@@ -62,7 +64,7 @@ function FormLogin(){
             <label>Password</label>
             <br></br>
             <br></br>
-            <input value={password} placeholder="your password..."type="password" onChange={(data) => {
+            <input ref={inputRef} value={password} placeholder="your password..."type="password" onChange={(data) => {
               setPassword(data.target.value);
             }}></input>
             <br></br>

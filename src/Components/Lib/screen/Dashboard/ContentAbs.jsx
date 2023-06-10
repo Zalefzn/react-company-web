@@ -15,7 +15,7 @@ class ContentAbs extends Component{
         return(
             <Fragment>
                 <div className="data-absen-content">
-                    <div className="content-absen">
+                    <div className  ="content-absen">
                         
                     </div>
                 </div>

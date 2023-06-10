@@ -15,10 +15,6 @@ class HomeScreens extends Component {
     this.logoutUser = this.logoutUser.bind(this);
   }
 
-  componentDidMount(){
-    
-  }
-
   logoutUser(e){
     e.preventDefault(); 
     swal({
@@ -28,7 +24,6 @@ class HomeScreens extends Component {
     })
   }
 
-    
   render() {
     return (
       <Fragment>

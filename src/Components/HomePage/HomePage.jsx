@@ -20,7 +20,7 @@ class HomePage extends Component {
   
   componentDidMount(){
     try{
-      axios.get('http://localhost:3004/category').then((res) => {
+      axios.get('').then((res) => {
         const take = res.data;
         this.setState = {
           take

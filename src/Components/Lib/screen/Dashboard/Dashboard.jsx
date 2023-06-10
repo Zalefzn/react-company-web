@@ -7,7 +7,6 @@ import CardCateg from './CategCard';
 import ContentAbs from './ContentAbs';
 
 
-
 class DashboardUser extends Component{
     constructor(props){
         super(props);
@@ -20,37 +19,19 @@ class DashboardUser extends Component{
     }
     
     componentDidMount(){
-        try{    
-            axios.get(`http://localhost:3004/data?category/id=` + 1)
-                .then((res) => { 
-                    const absensi = res.data;
-                    this.setState({
-                        absensi
-                    });
-                    console.info(absensi);
-                }
-            )
-        }catch(err){
-            console.info(err);
-        }
-    }
-
-    handleCategory(){
         try{
             axios.get('http://localhost:3004/category').then((res) => {
-                const category = res.data;
-                this.setState = {
+                const category = res.data
+                this.setState({
                     category
-                }
-            })
+                })
+            });
         }catch(err){
             console.info(err)
         }
     }
 
-
     render(){
-        const { absensi, category } = this.state;
         return(
             <Fragment>
                 <div>
@@ -67,9 +48,9 @@ class DashboardUser extends Component{
                         <div className="section-category">
                            <div className="card-category">
                                 <CardCateg
-                                absensi = {absensi}
-                                category = {category}
-                                id="2"/>
+                                id={this.state.category}
+                                category={this.state.category}
+                               />
                            </div>
                         </div>
                     </section>

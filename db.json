@@ -10,53 +10,7 @@
     },
     {
       "id" : 3,
-      "name" : "Data Karyawan"
-    },
-    {
-      "id" : 4,
-      "name" : "List Tugas"
-    }
-  ],
-  "data" : [
-    {
-      "id" : 1,
-      "name" : "Rizal Fauzan",
-      "jurusan" : "Sistem Informasi",
-      "kampus" : "ARS University",
-      "category" : {
-        "id" : 2,
-        "name" : "Absensi"
-      }
-    },
-    {
-      "id" : 2,
-      "name" : "Dimas Sky",
-      "jurusan" : "Sistem Informasi",
-      "kampus" : "ARS University",
-      "category" : {
-        "id" : 2,
-        "name" : "Absensi"
-      }
-    },
-    {
-      "id" : 1,
-      "name" : "Akmal Sky",
-      "jurusan" : "Sistem Informasi",
-      "kampus" : "ARS University",
-      "category" : {
-        "id" : 1,
-        "name" : "Dashboard"
-      }
-    },
-    {
-      "id" : 2,
-      "name" : "karel Sky",
-      "jurusan" : "Sistem Informasi",
-      "kampus" : "ARS University",
-      "category" : {
-        "id" : 1,
-        "name" : "Dashboard"
-      }
+      "name" : "Karyawan"
     }
   ]
 }
