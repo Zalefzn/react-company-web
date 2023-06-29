@@ -12,5 +12,27 @@
       "id" : 3,
       "name" : "Karyawan"
     }
+  ],
+  "absensi" : [
+    {
+      "id": 1,
+      "nama":"Rizal Fauzan",
+      "category": [
+        {
+          "id" : 2,
+          "name" : "Absensi"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nama":"Akmal Fauzi",
+      "category": [
+        {
+          "id" : 2,
+          "name" : "Absensi"
+        }
+      ]
+    }
   ]
 }

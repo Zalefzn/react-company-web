@@ -12,9 +12,25 @@ class DashboardUser extends Component{
         super(props);
         this.state = {
             category: [],
-            dashboard: [],
             absensi: [],
             value: "data",
+        }
+    }
+
+    handleChange = (value) => {
+        this.setState({
+            absensi: [],
+            value: value,
+        })
+        try{
+            axios.get("http://localhost:3004/absensi?category.name=" + value).then((res) => {
+                const absensi = res.data;
+                this.setState({
+                    absensi
+                });
+            });
+        }catch(err){
+            console.info(err);
         }
     }
     

@@ -9,6 +9,15 @@ class ContentAbs extends Component{
         this.state = {
             dataAbs : [],
         }
+        this.handleChangeValue = this.handleChangeValue.bind(this);
+    }
+
+    handleChangeValue = (value) => {
+        try{
+            
+        }catch(err){
+            
+        }
     }
 
     render(){

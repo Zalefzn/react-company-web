@@ -11,26 +11,27 @@ class CategoryCard extends Component{
             category: [],
         }
     }
-
+        
 componentDidMount(){
     try{
         axios.get('http://localhost:3004/category').then((res) => {
             this.setState({
                 category: res.data
             });
+              swal({
+                title: "!Success",
+                text: "Get data Success}",
+                icon: "success"
+            });
         });
     }catch(err){
         console.info(err);
     }
-        // swal({
-        // title: "!Success",
-        // text: "Get data Success}",
-        // icon: "success"
-        // })
 }
 
 render(){
     const {category} = this.state;
+    
     const data = category.filter((categ) => categ.id !== null);
     const listCategory = data.map((categ) => (
         <Fragment key={categ.id}>
