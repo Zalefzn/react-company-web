@@ -37,9 +37,9 @@ function FormLogin(){
         });
        }
      }
-  } catch (msg) {
-      if (msg.response) {
-          setMsg(msg.response.data.msg);
+  } catch (e) {
+      if (e.response) {
+          setMsg({msg});
       }
   }
 }
