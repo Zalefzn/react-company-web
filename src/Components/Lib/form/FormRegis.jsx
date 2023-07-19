@@ -2,7 +2,7 @@ import React, {useState}from 'react';
 import axios from 'axios';
 import {Link, useNavigate} from 'react-router-dom';
 import swal from 'sweetalert';
-import './FormRegis.css';
+import '../style/FormRegis.css';
 
  function FormRegis(){
   const navigate = useNavigate();

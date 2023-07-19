@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import "./LoginPage.css";
+import "../style/LoginPage.css";
 import FormLogin from "../Lib/form/Form";
 import "bootstrap/dist/css/bootstrap.min.css";
 

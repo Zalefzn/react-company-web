@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "./Form.css";
+import '../style/Form.css';
 import swal from "sweetalert";
 import axios from 'axios';
 import {Link, useNavigate} from "react-router-dom";

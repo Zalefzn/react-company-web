@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import "./HomePage.css";
+import "../style/HomePage.css";
 import swal from "sweetalert";
 import axios from 'axios';
 import {Link} from'react-router-dom';
-import ApiDataGet from "../Lib/api/Api";
+import ApiDataGet from "../api/Api";
 
 class HomePage extends Component {
   constructor(props) {

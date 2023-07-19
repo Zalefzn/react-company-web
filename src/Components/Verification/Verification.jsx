@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
-import './Verification.css';
+import '../style/Verification.css';
 
 class VerificationPage extends Component {
   constructor(props){

@@ -1,0 +1,44 @@
+.home-main-menu{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.main-menu-admin{
+    font-size: 25px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.sideMenuContent{
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.items-menu{
+    font-size: 25px;
+}
+
+.side-menu-admin{
+
+}
+
+.content-menu-admin{
+
+}
+
+.footer-menu-admin{
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    text-align: center;
+}

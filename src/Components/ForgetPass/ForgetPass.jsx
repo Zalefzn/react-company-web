@@ -2,7 +2,7 @@ import React, {useState, Fragment} from 'react';
 import FormEmail from "../Lib/form/FormEmail";
 import { useNavigate } from "react-router-dom";
 import swal from "sweetalert";
-import "./ForgetPass.css";
+import "../style//ForgetPass.css";
 
 function ForgetPass() {
   const [image] = useState({

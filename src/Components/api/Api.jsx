@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-
 const getUrl = "http://localhost:3001";
 const getUsers = "https://myfakeapi.com";
 

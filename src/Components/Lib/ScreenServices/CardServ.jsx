@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { card } from './data';
-import './CardServ.css';
+import '../style/CardServ.css';
 
 
 const CardServ = (id) => {

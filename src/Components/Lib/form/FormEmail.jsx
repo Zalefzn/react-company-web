@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import './FormEmail.css'
+import '../style/FormEmail.css';
 
 class FormEmail extends Component{
     constructor(props){

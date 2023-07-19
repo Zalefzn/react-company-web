@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './ScreenAbout.css';
+import '../style/ScreenAbout.css';
 
 class ScreenAbout extends Component {
     constructor(props){

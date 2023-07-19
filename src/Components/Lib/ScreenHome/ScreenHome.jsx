@@ -1,8 +1,7 @@
 import React, { Component, Fragment } from "react";
 import swal from 'sweetalert';
 import {Link} from 'react-router-dom';
-import axios from 'axios';
-import './ScreenHome.css';
+import '../style/ScreenHome.css';
 import ScreenAbout from "../ScreenAbout/ScreenAbout";
 import ScreenServ from "../ScreenServices/ScreenServ";
 

@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import CardServ from './CardServ';
-import './ScreenServ.css';
+import '../style/ScreenServ.css';
 import axios from 'axios';
 
 

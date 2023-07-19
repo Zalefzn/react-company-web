@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import FormRegis from "../Lib/form/FormRegis";
-import "./RegisterPage.css";
+import "../style/RegisterPage.css";
 
 class RegisterPage extends Component {
   constructor(props){
