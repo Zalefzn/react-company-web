@@ -27,7 +27,7 @@ function FormLogin(){
       text: `${email}`,
       icon: "success",
     });
-    navigate("/HomeScreen");
+    navigate("");
      }else {
        if(email || password === ""){
         swal({

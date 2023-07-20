@@ -43,25 +43,6 @@ import '../style/FormRegis.css';
     } catch(err){
       console.info(err);
     }
-    
-    // try {
-    //     await axios.post('http://localhost:3001/dataUsers', {
-    //         name: name,
-    //         email: email,
-    //         password: password,
-    //         confPassword: confPassword
-    //     });
-    //     swal({
-    //       title: "!Success",
-    //       text: "Success Register",
-    //       icon: "success",
-    //     })
-    //     navigate("/LoginPage");
-    // } catch (error) {
-    //     if (error.response) {
-    //         setMsg(error.response.data.msg);
-    //     }
-    // }
   }
   
 
