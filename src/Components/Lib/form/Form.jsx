@@ -11,7 +11,6 @@ function FormLogin(){
   const [email, setEmail] = useState('');
   const [password , setPassword] = useState('');
   const [msg, setMsg] = useState('');
-
   const navigate = useNavigate();
   
   async function loginUser(){
@@ -27,7 +26,7 @@ function FormLogin(){
       text: `${email}`,
       icon: "success",
     });
-    navigate("");
+    navigate("/AdminPanel");
      }else {
        if(email || password === ""){
         swal({
